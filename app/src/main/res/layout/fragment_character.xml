@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.ui.fragments.home.character.CharacterFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_update_element"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="input person's name..." />
+
+        <EditText
+            android:id="@+id/et_input_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="25dp"
+            android:hint="input person's image url..." />
+
+        <Button
+            android:id="@+id/btn_update_local_character"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="update person" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp"
+        android:orientation="vertical">
+
+        <SearchView
+            android:id="@+id/sv_search_characters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false" />
+
+
+        <Button
+            android:id="@+id/btn_add_local_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="add person" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_character_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="25dp"
+        android:text="clear all" />
+
+</FrameLayout>
